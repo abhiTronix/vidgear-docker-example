@@ -1,0 +1,21 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: vidgear-streamer:test
+    container_name: vidgear-streamer-test
+    environment:
+      - VIDEO_URL=https://youtu.be/xvFZjo5PgG0
+      - OUTPUT_FILE=/app/output/test_output.mp4
+      - FRAME_LIMIT=100
+      - VERBOSE=true
+    volumes:
+      - ./output:/app/output
+      - ./tests:/app/tests
+    command: |
+      bash -c "
+        pip install pytest pytest-cov pytest-mock && \
+        pytest tests/ -v --cov=app --cov-report=term
+      "
+    restart: no
