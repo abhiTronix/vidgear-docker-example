@@ -1,0 +1,2 @@
+vidgear[asyncio]
+uvloop
