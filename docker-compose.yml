@@ -1,0 +1,49 @@
+services:
+  vidgear-streamer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BUILD_DATE=${BUILD_DATE:-now}
+        - VCS_REF=${VCS_REF:-dev}
+    image: vidgear-streamer:latest
+    container_name: vidgear-streamer
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Mount output directory
+      - ./output:/app/output
+      # Optional: Mount custom video sources
+      # - ./videos:/app/videos:ro
+    environment:
+      # Override environment variables from .env file if needed
+      - VIDEO_URL=${VIDEO_URL:-https://youtu.be/xvFZjo5PgG0}
+      - OUTPUT_FILE=${OUTPUT_FILE:-/app/output/vidgear_output.mp4}
+      - VIDEO_STREAM_QUALITY=${VIDEO_STREAM_QUALITY:-best}
+      - AUDIO_STREAM_QUALITY=${AUDIO_STREAM_QUALITY:-bestaudio}
+      - OUTPUT_CODEC=${OUTPUT_CODEC:-libx264}
+      - AUDIO_CODEC=${AUDIO_CODEC:-aac}
+      - FRAME_LIMIT=${FRAME_LIMIT:-0}
+      - VERBOSE=${VERBOSE:-false}
+    restart: 
+      no # Restart policy
+    security_opt:
+      - no-new-privileges:true
+    # Resource limits (optional but recommended for production)
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4G
+        reservations:
+          cpus: '2.0'
+          memory: 2G
+    # Network configuration (if needed)
+    # networks:
+    #   - vidgear-network
+
+# Optional: Define custom networks
+# networks:
+#   vidgear-network:
+#     driver: bridge
