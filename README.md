@@ -2,10 +2,13 @@
 
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
-[![VidGear](https://img.shields.io/badge/VidGear-Framework-green.svg?style=for-the-badge)](https://github.com/abhiTronix/vidgear)
+[![VidGear](https://img.shields.io/badge/VidGear-Framework-green.svg?style=for-the-badge)](https://abhitronix.github.io/vidgear)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
 
-A production-ready Docker application template for the VidGear framework that demonstrates video streaming, processing, and encoding with audio support. This template showcases best practices for containerizing VidGear applications with FFmpeg, GStreamer, and OpenCV.
+A production-ready Docker application template for the [**VidGear Python framework**](https:/'/github.com/abhiTronix/vidgear) that demonstrates video streaming, processing, and encoding with audio support. This template showcases best practices for containerizing VidGear applications with FFmpeg, GStreamer, and OpenCV.
+
+<img src="https://abhitronix.github.io/vidgear/latest/assets/images/vidgear.png" loading="lazy" alt="Vidgear Logo" style="width: 50%;"/>
+<img src="docs/assets/docker-logo-blue.png" loading="lazy" alt="Docker Logo" style="width: 20%;"/>
 
 ## ✨ Features
 
@@ -247,11 +250,8 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 - [ ] Add GPU acceleration support (NVIDIA/AMD)
 - [ ] Implement real-time streaming (RTMP/HLS)
 - [ ] Add web UI for configuration
-- [ ] Support for multiple video sources
 - [ ] Add video filters and effects
 - [ ] Implement batch processing
-- [ ] Add monitoring and metrics (Prometheus)
-- [ ] Kubernetes deployment templates
 
 ## ⚠️ Troubleshooting
 
@@ -292,4 +292,4 @@ Typical performance metrics:
 
 ---
 
-Made with ❤️ by the VidGear community
+Made with ❤️.
