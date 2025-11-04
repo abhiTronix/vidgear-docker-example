@@ -29,8 +29,8 @@ services:
     restart: 
       no # Restart policy
     security_opt:
-      - no-new-privileges:true
-    # Resource limits (optional but recommended for production)
+      - no-new-privileges:true # Security option
+    # Resource limits (optional but recommended)
     deploy:
       resources:
         limits:
