@@ -1,14 +1,24 @@
 # 🎥 VidGear Docker Streamer
 
+A production-ready Docker application template for the [**VidGear Python framework**](https:/'/github.com/abhiTronix/vidgear) that demonstrates video streaming, processing, and encoding with audio support. This template showcases best practices for containerizing VidGear applications with FFmpeg, GStreamer, and OpenCV.
+
+<div align="center">
+<img src="https://abhitronix.github.io/vidgear/latest/assets/images/vidgear.png" loading="lazy" alt="Vidgear Logo" style="width: 85%;"/>
+</div> <div align="right">
+<img src="docs/assets/docker-logo-blue.png" loading="lazy" alt="Docker Logo" style="width: 20%;"/>
+</div>   
+
+&nbsp;
+&nbsp;
+
+<div align="center">
+
 [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![VidGear](https://img.shields.io/badge/VidGear-Framework-green.svg?style=for-the-badge)](https://abhitronix.github.io/vidgear)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
 
-A production-ready Docker application template for the [**VidGear Python framework**](https:/'/github.com/abhiTronix/vidgear) that demonstrates video streaming, processing, and encoding with audio support. This template showcases best practices for containerizing VidGear applications with FFmpeg, GStreamer, and OpenCV.
-
-<img src="https://abhitronix.github.io/vidgear/latest/assets/images/vidgear.png" loading="lazy" alt="Vidgear Logo" style="width: 50%;"/>
-<img src="docs/assets/docker-logo-blue.png" loading="lazy" alt="Docker Logo" style="width: 20%;"/>
+</div> 
 
 ## ✨ Features
 
