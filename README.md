@@ -23,7 +23,7 @@ A production-ready Docker application template for the [**VidGear Python framewo
 ## ✨ Features
 
 - 🎬 **Video Streaming**: Stream videos from YouTube, Twitch, and other platforms using yt-dlp
-- 🎵 **Audio Support**: Automatic audio extraction and merging
+- 🎵 **Audio Support**: Optional audio extraction and merging (falls back to video-only output if no audio available)
 - 🔧 **Flexible Configuration**: Environment-based configuration for easy customization
 - 🐳 **Docker Compose**: Simple orchestration with docker-compose
 - 📦 **Multi-stage Build**: Optimized Docker image with minimal size
@@ -126,11 +126,13 @@ All configuration is done through environment variables. See [docs/CONFIGURATION
 | `VIDEO_URL` | Source video URL | `https://youtu.be/xvFZjo5PgG0` |
 | `OUTPUT_FILE` | Output file path | `/app/output/vidgear_output.mp4` |
 | `VIDEO_STREAM_QUALITY` | Video quality (best/720p/1080p) | `best` |
-| `AUDIO_STREAM_QUALITY` | Audio quality | `bestaudio` |
+| `AUDIO_STREAM_QUALITY` | Audio quality (ignored if no audio available) | `bestaudio` |
 | `OUTPUT_CODEC` | Video codec (libx264/libx265) | `libx264` |
-| `AUDIO_CODEC` | Audio codec (aac/mp3) | `aac` |
+| `AUDIO_CODEC` | Audio codec (ignored if no audio available) | `aac` |
 | `FRAME_LIMIT` | Max frames to process (0=unlimited) | `0` |
 | `VERBOSE` | Enable verbose logging | `false` |
+
+**Note**: Audio-related settings are only used when the source video contains audio tracks. If no audio is available, the application will output video-only content.
 
 ## 🧪 Testing
 
