@@ -1,2 +1,2 @@
-vidgear[asyncio]
+vidgear[asyncio]>=0.3.4
 uvloop
